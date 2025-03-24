@@ -3,7 +3,6 @@ package tr.com.aselsankadir.casestudy.presentation.dto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.math.BigDecimal;
 

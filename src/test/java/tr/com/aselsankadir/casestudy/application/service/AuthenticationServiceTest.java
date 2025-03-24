@@ -10,7 +10,6 @@ import tr.com.aselsankadir.casestudy.domain.common.AselDomainException;
 import tr.com.aselsankadir.casestudy.domain.common.Email;
 import tr.com.aselsankadir.casestudy.domain.common.PasswordHasher;
 import tr.com.aselsankadir.casestudy.domain.common.TokenProvider;
-import tr.com.aselsankadir.casestudy.domain.user.UserId;
 import tr.com.aselsankadir.casestudy.domain.user.*;
 
 import java.util.Date;

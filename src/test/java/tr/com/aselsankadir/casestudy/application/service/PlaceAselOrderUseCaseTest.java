@@ -18,9 +18,6 @@ import tr.com.aselsankadir.casestudy.domain.orderitem.AselOrderItem;
 import tr.com.aselsankadir.casestudy.domain.orderitem.CreateOrderItemCommand;
 import tr.com.aselsankadir.casestudy.domain.restaurant.RestaurantId;
 import tr.com.aselsankadir.casestudy.domain.user.UserId;
-import tr.com.aselsankadir.casestudy.infrastructure.jpa.AselMenuItemEntity;
-import tr.com.aselsankadir.casestudy.presentation.dto.CreateAselOrderRequest;
-import tr.com.aselsankadir.casestudy.presentation.dto.CreateMenuItemRequest;
 
 import java.math.BigDecimal;
 import java.util.List;

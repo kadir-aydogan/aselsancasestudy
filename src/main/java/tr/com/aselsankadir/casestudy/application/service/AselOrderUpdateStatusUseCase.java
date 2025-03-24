@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tr.com.aselsankadir.casestudy.domain.common.AselRuntimeException;
 import tr.com.aselsankadir.casestudy.domain.common.DomainEvent;
-import tr.com.aselsankadir.casestudy.domain.common.IAselLogger;
 import tr.com.aselsankadir.casestudy.domain.common.IDomainEventPublisher;
 import tr.com.aselsankadir.casestudy.domain.order.AselOrder;
 import tr.com.aselsankadir.casestudy.domain.order.AselOrderStatus;
@@ -40,6 +39,8 @@ public class AselOrderUpdateStatusUseCase {
         List<DomainEvent> events = order.getEvents();
 
         domainEventPublisher.publishAll(events);
+
+        order.clearEvents();
 
         return updated;
     }

@@ -8,8 +8,6 @@ import tr.com.aselsankadir.casestudy.domain.common.PasswordHasher;
 import tr.com.aselsankadir.casestudy.domain.common.TokenProvider;
 import tr.com.aselsankadir.casestudy.domain.user.*;
 
-import java.util.Optional;
-
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService implements AuthenticationUseCase {

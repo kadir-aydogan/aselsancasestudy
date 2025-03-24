@@ -1,5 +1,6 @@
 package tr.com.aselsankadir.casestudy.domain.orderitem;
 
+import tr.com.aselsankadir.casestudy.domain.common.AselDomainException;
 import tr.com.aselsankadir.casestudy.domain.menuitem.MenuItemId;
 import tr.com.aselsankadir.casestudy.domain.order.OrderId;
 import tr.com.aselsankadir.casestudy.domain.restaurant.RestaurantId;
@@ -31,16 +32,16 @@ public class AselOrderItem {
 
     public static AselOrderItem create(MenuItemId menuItemId, RestaurantId restaurantId, int quantity, BigDecimal amount) {
         if (menuItemId == null)
-            throw new IllegalArgumentException("Yemek seçmelisiniz.");
+            throw new AselDomainException("Yemek seçmelisiniz.");
 
         if (restaurantId == null)
-            throw new IllegalArgumentException("Restorant seçiniz.");
+            throw new AselDomainException("Restorant seçiniz.");
 
         if (quantity <= 0)
-            throw new IllegalArgumentException("Miktar negatif olamaz.");
+            throw new AselDomainException("Adet sayısı sıfır ya da negatif olamaz.");
 
         if (amount == null || amount.compareTo(BigDecimal.ZERO) <= 0)
-            throw new IllegalArgumentException("Toplam tutar negatif olamaz.");
+            throw new AselDomainException("Toplam tutar negatif olamaz.");
 
         return new AselOrderItem(OrderItemId.newId(), null, menuItemId, restaurantId, quantity, amount);
     }
